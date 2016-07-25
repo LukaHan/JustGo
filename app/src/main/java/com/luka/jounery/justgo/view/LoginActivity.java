@@ -15,10 +15,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
-import com.luka.jounery.justgo.base.BaseActivity;
 import com.luka.jounery.justgo.R;
-import com.luka.jounery.justgo.video.VideoActivity;
+import com.luka.jounery.justgo.base.BaseActivity;
 import com.luka.jounery.justgo.presenter.LoginPresenterCompl;
+import com.luka.jounery.justgo.test.TestActivity;
 
 public class LoginActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener, ILoginView, View.OnClickListener {
@@ -44,7 +44,9 @@ public class LoginActivity extends BaseActivity
             public void onClick(View view) {
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
-                Intent intent = new Intent(LoginActivity.this, VideoActivity.class);
+//                Intent intent = new Intent(LoginActivity.this, VideoActivity.class);
+//                Intent intent = new Intent(LoginActivity.this, FFmpegRecorderActivity.class);
+                Intent intent = new Intent(LoginActivity.this, TestActivity.class);
                 startActivity(intent);
             }
         });
@@ -158,6 +160,7 @@ public class LoginActivity extends BaseActivity
                     loginPresenter.clear();
                 }
             }).show();
+
         }
     }
 
